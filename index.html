@@ -2,23 +2,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <center>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wil's Odds</title>
+    <link rel="stylesheet" href="(link unavailable)">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
         }
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 40px auto;
         }
         .header {
             background-color: #f0f0f0;
             padding: 20px;
             text-align: center;
+            border-radius: 10px 10px 0 0;
         }
         .odds-container {
             display: flex;
@@ -26,12 +27,19 @@
             justify-content: space-between;
         }
         .odds-card {
-            margin: 40px;
-            padding: 40px;
+            margin: 20px;
+            padding: 20px;
             border: 1px solid #ddd;
             border-radius: 30px;
-            width: calc(33.33% - 30px);
+            width: calc(45% - 20px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+    
+      .w {
+            margin: 50px;
+            padding: 60px;
+            border-radius: 60px;
+              }
         .odds-card img {
             width: 100%;
             height: 150px;
@@ -48,43 +56,76 @@
             font-weight: bold;
             color: #008000;
         }
-        .past-odds {
-            margin-top: 40px;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Wil's Odds</h1>
+            <h1 class="display-4">Wil's Odds</h1>
         </div>
+           
         <div class="odds-container">
-            <!-- Special odds of the day -->
+            <!-- Left Side Odds -->
             <div class="odds-card">
-                <img src="today.jpg" alt="Odds Image">
-                <div class="date">Today's Odds</div>
-                <div class="odds">Booking code: 4HKCMDT
-                </div>
+          <div class="date">Today </div>
+                
+                <style>
+        #time {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            color: blue;
+        }
+                
+    </style>
+</head>
+<body>
+    <div id="time"></div>
+    <script>
+        function displayTime() {
+            const currentTime = new Date();
+            const offset = 3; // East African Time (EAT) offset from UTC
+            const hours = (currentTime.getUTCHours() + offset) % 24;
+            const minutes = currentTime.getUTCMinutes();
+            const seconds = currentTime.getUTCSeconds();
+            const ampm = hours >= 12 ? "PM" : "AM";
+            const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
+            document.getElementById("time").innerText = `${formattedHours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')} ${ampm}`;
+        }
+        displayTime();
+        setInterval(displayTime, 1000);
+    </script>
+                
+                 <img id="myImage" src="today.jpg" alt="today.jpg" style="width:100%; height:auto;">
+
+                <div class="odds">Booking code: 4HKCMDT</div>
             </div>
-            <!-- Past odds that won -->
-            <div class="past-odds">
-                <h2>Past Odds</h2>
-                <div class="odds-container">
-                    <div class="odds-card">
-                        <img src="yes.jpg" alt="Odds Image">
-                        <div class="date">Yesterday</div>
-                        <div class="odds">2.80</div>
-                    </div>
-                    <div class="odds-card">
-                        <img src="yes2.jpg" alt="Odds Image">
-                        <div class="date">2 Days Ago</div>
-                        <div class="odds">4.20</div>
-                    </div>
-                    <!-- Add more past odds here -->
-                </div>
+            <!-- Right Side Odds -->
+            <div class="odds-card">
+                <img src="yes.jpg" alt="Odds Image">
+                <div class="date">For Odds</div>
+                <div class="odds">2.35</div>
+            </div>
+        </div>
+        <div class="odds-container mt-4">
+            <b>Special free odds get booking code above</b>
+            <h2 class="mb-4 text-center">Past Odds</h2>
+            <div class="odds-card">
+                <img src="yes2.jpg" alt="Odds Image">
+                <div class="date">Sure</div>
+                <div class="odds">1.22</div>
+            </div>
+            <div class="odds-card">
+                <img src="yes3.jpg" alt="Odds Image">
+                <div class="date">Special</div>
+                <div class="odds">1.17</div>
             </div>
         </div>
     </div>
-</center>
+    <b>Join Whatapp group at</b><footer>
+     <img id="w" src="whatsapp.jpg"  style="width:15%; height:auto;">
+    </footer>
+    <a href="https://chat.whatsapp.com/Gn8LbQJT1dx1GYzySbiw3l">Join group</a>
+    <script src="(link unavailable)"></script>
 </body>
 </html>
