@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wil</title>
+    <link rel="stylesheet" href="(link unavailable)">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            position: relative;
+        }
+        .w{
+            width:80px;
+            border-radius: 40px;
+            
+          
+           
+       }
+        .hhh{
+            width:40px;
+            border-radius: 30px;
+            
+            
+           
+        }
+        
+        .info-container {
+            position: absolute;
+            top: 200%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: ;
+        }
+        
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #000;
+            color: #fff;
+            padding: 1px 10px;
+            text-align: center;
+            border-top: 2px solid #000;
+            border: 2px solid #000;
+        }
+        
+        .bottom-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .bottom-nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        
+        .bottom-nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .icon-btn {
+            font-size: 24px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        
+        .account-menu {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 130px;
+            height: 60vh;
+            background-color: #777;
+            padding: 20px;
+            border: 3px solid #000;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: right 0.5s;
+        }
+        
+        .account-menu.show {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <center><img src="wil.jpg" class="w" >
+           </center>
+        <style>
+        .post-container {
+            width: 80%;
+            margin: 20px auto;
+            border: 3px solid #000;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .post-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .post-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .post-author {
+            font-weight: bold;
+        }
+        
+        .post-time {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .post-content {
+            margin-bottom: 20px;
+        }
+        
+        .post-image {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        
+        .post-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .post-likes, .post-comments, .post-views {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        
+        .post-likes svg, .post-comments svg, .post-views svg {
+            margin-right: 5px;
+        }
+        
+        .post-likes {
+            color: #f00;
+        }
+        
+        .post-comments {
+            color: #0f0;
+        }
+        
+        .post-views {
+            color: #00f;
+        }
+     .v{
+            width:25px;
+            border-radius: 80px;
+            
+            
+           
+        }
+     .g{
+            width:20px;
+            border-radius: 30px;
+            
+            
+           
+        }
+         .b{
+            width:120px;
+             height:40px;
+            border-radius: 30px;
+             background-color:#000;
+             color:#fff;
+             position:absolute;
+            
+            
+           
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="post-container">
+        <div class="post-header">
+            <img class="post-avatar" src="p.jpg" alt="p">
+            <div>
+                <span class="post-author">Mungau Williams<img src="v.jpg" class="v" width=""></span>
+                <span class="post-time">1st.Nov.2024</span>
+            </div>
+        </div>
+        <b class="post-content">Reason For this Site</b>
+        <img class="post-image" src="a.jpg" alt="a">
+        <a href="X.com">X.com</a>
+        <p>To ease reach of information to my Fellow Honest Ugandans</p>
+        <div class="post-actions">
+            <div class="post-likes">
+                <svg width="20" height="20">
+                    <path fill="#f00" d=""/>
+                </svg>
+                
+            </div>
+            <div class="post-comments">
+                <svg width="20" height="20">
+                    <path fill="#000" d=" 2c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 2c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm-1 8h2v5a1 1 0 0 1-1 1h-5v-5c0-.6.4-1 1-1s1 .4 1 1v5z"/>
+                </svg>
+                
+                <button id="b" class="b" onclick="changeText()">Follow</button>
+            </div>
+            <div class="post-views">
+
+    
+    <script>
+        function changeText() {
+            const b = document.getElementById('b');
+            if (b.textContent === 'Follow') {
+                b.textContent = 'Following';
+                b.style.background = '#4CAF50'; // change background color to indicate following
+            } else {
+                b.textContent = 'Follow';
+                b.style.background = '#000'; // change background color back to original
+            }
+        }
+    </script>
+  <div class="info-container">
+       <h3>Top Reports</h3>
+    </div>
+    <div class="bottom-nav">
+        <ul>
+            <li><a href="ug.html"><i class="fas fa-home icon-btn"></i> <img src="home.jpg"
+                class="hhh" ></a>
+             <li><a href="#" ><i class="fas fa-user icon-btn"></i> <img src="reels.jpg"
+                class="hhh" ></a></a></li>
+           
+           <li><a href="https://chat.whatsapp.com/Gn8LbQJT1dx1GYzySbiw3l"><i class="fas fa-sync icon-btn"></i><img src="chat.jpg"
+                class="hhh" ></a></li>
+            <li><a href="#" id="account-btn"><i class="fas fa-user icon-btn"></i> <img src="account.jpg"
+                class="hhh" ></a></a></li>
+           
+                </ul>
+    </div>
+    <div class="account-menu">
+        <img src="wil.jpg" class="w">
+        <button class="theme-toggle" id="theme-toggle">
+    <i class="fas fa-moon" id="moon-icon"></i>
+    
+       <ul>
+            <li><a href="https://www.google.com/search?q=visit+Uganda+&client=ms-android-transsion&sca_esv=acbfc1477591e29f&sxsrf=ADLYWIJUpm8YhjOZY7uPBTqq53WvhX8w-A%3A1730638163435&ei=U3EnZ76KGqmQxc8PtKjTuQg&oq=visit+Uganda+&gs_lp=EhNtb2JpbGUtZ3dzLXdpei1zZXJwIg12aXNpdCBVZ2FuZGEgMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCMgcQIxgnGOoCSMYuUPQMWMMocAJ4AZABAJgBAKABAKoBALgBA8gBAPgBAZgCAqACWKgCD5gDOZIHATKgBwA&sclient=mobile-gws-wiz-serp"><i class="fas fa-home icon-btn"></i>Visit UG</a></li>
+            <li><a href="#" id="account-btn"><i class="fas fa-user icon-btn"></i> About us</a></li>
+            <li><a href="https://chat.whatsapp.com/Gn8LbQJT1dx1GYzySbiw3l"><i class="fas fa-sync icon-btn"></i><img src="g.jpg" class="g">Log in</a></li>
+                </ul>
+        <button><a href="tel:0753266873">CONTACT ME</a></button>
+    </div>
+    
+    <script>
+        const accountBtn = document.getElementById('account-btn');
+        const accountMenu = document.querySelector('.account-menu');
+        
+        accountBtn.addEventListener('click', () => {
+            accountMenu.classList.toggle('show');
+        });
+        
+        // Close account menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!accountMenu.contains(e.target) && !accountBtn.contains(e.target)) {
+                accountMenu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
