@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Time!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+    
+    .logo {
+        width:150px;
+        height:150px;
+    }
+    .quiz-container
+    { border-radius:50px;
+        border-color:black;
+        
+    }
+    .s
+    { border-radius:30px;
+        border-color:#000;
+    }
+  </style>
+    <div class="quiz-container">
+        <img src="quiz.jpg" alt="Quiz Logo" class="logo">
+        <h2>Welcome to the Quiz!</h2>
+        <p>Are you ready to test your knowledge?</p>
+        <button onclick="startQuiz()" class="s">Start Quiz</button>
+    </div>
+    
+    <script>
+        function startQuiz() {
+            // Add your JavaScript code here to transition to the quiz questions
+            // For example, you could redirect to another HTML page or dynamically display questions on the current page.
+            window.location.href = "quiz.html"; // Replace "quiz.html" with the actual filename of your quiz page
+        }
+    </script>
+</body>
+</html>

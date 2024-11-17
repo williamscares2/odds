@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="wil.css">
+     <script>
+        let timeLeft = 60;
+        let timerInterval;
+
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                document.getElementById("timer").textContent = timeLeft;
+
+                if (timeLeft === 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById("question").style.display = "none";
+                    document.getElementById("choices").style.display = "none";
+                    document.getElementById("timer").style.display = "none";
+                    document.getElementById("result").textContent = "Time's up!";
+                }
+            }, 1000);
+        }
+
+        startTimer();
+    </script>
+</head>
+<body>
+    <div class="quiz-container">
+        <h5 id="question"></h5>
+        <ul id="choices">
+            
+        </ul>
+    
+    <button id="nextButton">Next Question</button>
+        <h6>Time left</h6>
+        <p id="timer" style="color:red">60</p>
+    <p id="result"></p>
+
+    </div>
+    <script src="wil.js"></script>
+</body>
+</html>
+
+    
+    
